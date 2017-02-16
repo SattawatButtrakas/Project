@@ -91,28 +91,28 @@ angular.module('app.routes', [])
     controller:'SignupstudentControl'
   })
 
-.state('SignupAddmin',{
-    url:'/SignupAddmin',
-    templateUrl:'templates/SignupAddmin.html',
-    controller:'SignupAddminControl'
+.state('SignupAdmin',{
+    url:'/SignupAdmin',
+    templateUrl:'templates/SignupAdmin.html',
+    controller:'SignupAdminControl'
   })
 
-.state('Addmin',{
-    url:'/Addmin',
-    templateUrl:'templates/Addmin.html',
-    controller:'AddminControl'
+.state('Admin',{
+    url:'/Admin',
+    templateUrl:'templates/Admin.html',
+    controller:'AdminControl'
   })
 
-.state('AddminTeacher',{
-    url:'/AddminTeacher',
-    templateUrl:'templates/AddminTeacher.html',
-    controller:'AddminTeacherControl'
+.state('AdminTeacher',{
+    url:'/AdminTeacher',
+    templateUrl:'templates/AdminTeacher.html',
+    controller:'AdminTeacherControl'
   })
 
-.state('AddminAddmin',{
-    url:'/AddminAddmin',
-    templateUrl:'templates/AddminAddmin.html',
-    controller:'AddminAddminControl'
+.state('AdminAddmin',{
+    url:'/AdminAddmin',
+    templateUrl:'templates/AdminAdmin.html',
+    controller:'AdminAdminControl'
   })
 
 .state('Addsubject',{
