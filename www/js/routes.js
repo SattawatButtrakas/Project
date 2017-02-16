@@ -30,7 +30,7 @@ angular.module('app.routes', [])
     url: '/page6',
     views: {
       'tab3': {
-        templateUrl: 'templates/signup.html',
+        templateUrl: 'templates/SignupMenu.html',
         controller: 'signupCtrl'
       }
     }
