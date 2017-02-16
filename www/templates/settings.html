@@ -1,0 +1,45 @@
+<ion-view style="" class=" " id="page12" title="Profile">
+    <ion-content class="has-header" padding="false" style="background: url(img/material-graphite.jpg) center; background-size: cover;">
+        <form name="settingForm" class="list " id="settings-form">
+            <ion-list class="">
+                <!-- Profile Cover Page -->
+                <div class="profile-nav col-md-3">
+                    <div class="panel">
+                        <div class="user-heading round">
+                            <a href="#">
+                                <img ng-src="{{&apos;img/fk/&apos;+ user_info.photoURL +&apos;.jpg&apos;}}">
+                            </a>
+                            <p style="color: #ffffff;">{{user_info.displayName}}</p>
+                        </div>
+                    </div>
+                </div>
+                <a>Name :</a>
+                <label class="item item-input ic-selected">
+                    <input style="color: #000;" ng-model="user_extras.Name" type="text" placeholder="Name">
+                </label>
+                <a>Student ID :</a>
+                <label class="item item-input ic-selected">
+                    <input style="color: #000;" ng-model="user_extras.StudentID" type="text" placeholder="Student ID ">
+                </label>
+                <a>Faculty :</a>
+                <label class="item item-input ic-selected">
+                    <input style="color: #000;" ng-model="user_extras.Faculty" type="text" placeholder="Faculty">
+                </label>
+                <a>Program :</a>
+                <label class="item item-input ic-selected">
+                    <input style="color: #000;" ng-model="user_extras.Program" type="text" placeholder="Program">
+                </label>
+                <a>Telephone :</a>
+                <label class="item item-input ic-selected">
+                    <input style="color: #000;" ng-model="user_extras.Telephone" type="text" placeholder="Telephone">
+                </label>
+            </ion-list>
+        </form>
+    </ion-content>
+    <!-- <ion-footer-bar  class="bar button-bar-footer" style="height: auto;">   -->
+    <div id="footer" class="button-bar">
+        <a style="min-width: 50%;border-radius: 0px;" ng-click="cancel()" class="button button-lite icon-left ion-close">Cancel</a>
+        <a style="min-width: 50%;border-radius: 0px;" ng-click="save(user_extras,data_editable)" class="button button-assertive icon-left ion-checkmark">Save</a>
+    </div>
+    <!-- </ion-footer-bar>  -->
+</ion-view>

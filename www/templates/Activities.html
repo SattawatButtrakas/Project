@@ -1,9 +1,20 @@
-<ion-view view-title="Activities">
-  <ion-content>
-    <h1>Activities</h1>
-  </ion-content>
+<ion-view title="Activities">
+
+
+  <!-- <ion-header-bar class="bar-positive">
+    <button class="button button-iocon ion-chevron-left icon>Edit()" ng-click="btnBack()">   กลับ</button>
+    
+  </ion-header-bar> -->
+
+    <!-- <ion-content id="ppp">
+      <button class="button buttonSj-At" id="B1" ng-click="btngo()">EDUCATIONAL COMPUTER TECHNOLOGY</button>
+      <button class="button buttonSj-At" ng-click="btngo()">TECHNOLOGY PHOTOGRAPHY</button>
+      <button class="button buttonSj-At" ng-click="btngo()">COMPUTER SECURTY</button>
+      <button class="button buttonSj-At" ng-click="btngo()">----</button>
+    </ion-content> -->
+    <ion-content  id="background">
+      <div ng-repeat="test in data">
+        <button class="button buttonSj-At"  ng-click="info()" >{{test.name}}</button>
+      </div>
+    </ion-content>
 </ion-view>
-
-
-
-
