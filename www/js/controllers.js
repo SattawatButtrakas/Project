@@ -261,10 +261,10 @@ angular.module('app.controllers', [])
                 Program: extras.Program
             });
         }
-        if (extras.Major != "" && extras.Major != null) {
-            //Update Major 
+        if (extras.Telephone != "" && extras.Telephone != null) {
+            //Update Telephone 
             fireBaseData.refUser().child($scope.user_info.uid).update({ // set
-                Major: extras.Major
+                Telephone: extras.Telephone
             });
         }
     };

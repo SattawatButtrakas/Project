@@ -2,7 +2,7 @@ angular.module('app')
 
 .controller('menu2Ctrl', function($scope, $rootScope, $ionicSideMenuDelegate, fireBaseData, $state,
     $ionicHistory, $firebaseArray, sharedCartService, sharedUtils) {
-	console.log('MANU START.');
+    console.log('MANU START.');
 
     //Check if user already logged in
     firebase.auth().onAuthStateChanged(function(user) {
@@ -50,7 +50,7 @@ angular.module('app')
         sharedCartService.add(item);
     };
 
-	//Tae
+    //Tae
     $scope.btngosubject = function () {
     console.log('subject pressed.');
     $state.go('subject');

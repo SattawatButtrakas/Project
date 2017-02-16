@@ -27,11 +27,11 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.signup', {
-    url: '/page6',
+    url:'/SignupMenu',
     views: {
       'tab3': {
         templateUrl: 'templates/SignupMenu.html',
-        controller: 'signupCtrl'
+         controller:'SignupMenuControl'
       }
     }
   })
@@ -91,10 +91,10 @@ angular.module('app.routes', [])
     controller:'SignupstudentControl'
   })
 
-.state('SignupAdmin',{
-    url:'/SignupAdmin',
-    templateUrl:'templates/SignupAdmin.html',
-    controller:'SignupAdminControl'
+.state('SignupAddmin',{
+    url:'/SignupAddmin',
+    templateUrl:'templates/SignupAddmin.html',
+    controller:'SignupAddminControl'
   })
 
 .state('Admin',{
@@ -109,8 +109,8 @@ angular.module('app.routes', [])
     controller:'AdminTeacherControl'
   })
 
-.state('AdminAddmin',{
-    url:'/AdminAddmin',
+.state('AdminAdmin',{
+    url:'/AdminAdmin',
     templateUrl:'templates/AdminAdmin.html',
     controller:'AdminAdminControl'
   })

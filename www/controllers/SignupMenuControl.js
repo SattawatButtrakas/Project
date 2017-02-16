@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('SignupMenuControl',function($scope, $state, $ionicPopup) {
+    .controller('SignupMenuControl',function($scope, $state, $ionicPopup) {
      console.log('SignupMenu START.');
 
     $scope.btngoSignupstudent = function () {
@@ -13,4 +13,7 @@ angular.module('app')
     }
 
     
+
+
+  
  })

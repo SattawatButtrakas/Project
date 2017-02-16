@@ -1,6 +1,6 @@
 angular.module('app')
-	.controller('AddminAddminControl',function($scope, $state, $ionicPopup) {
-     console.log('AddminAddmin START.');
+	.controller('AdminAdminControl',function($scope, $state, $ionicPopup) {
+     console.log('AdminAdmin START.');
 
 
 	$scope.btngoAddactivities = function () {

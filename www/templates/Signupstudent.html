@@ -16,50 +16,46 @@
          <input type="text" placeholder="ดีมาก">
        </label>
 
-       <label class="item item-input item-stacked-label">
-          <span class="input-label">E-Mail</span>
-          <input type="text" placeholder="E-Mail ของสถาบัน ">
-        </label>
-
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">รหัสผ่าน</span>
-        <input type="password" placeholder="xxxxxx 6 ตัว">
-      </label>
-
       <label class="item item-input item-stacked-label">
         <span class="input-label">รหัสนักศึกษา</span>
         <input type="number" placeholder="เช่น 56030xxx">
       </label>
 
-      <label class="item item-input item-select">
-          <span class="input-label">คณะ</span>
-          
-            <select>
-              <option value="engineer">คณะวิศวกรรมศาสตร์</option>
-              <option>คณะสถาปัตยกรรมศาสตร์</option>
-              <option>คณะครุศาสตร์อุตสาหกรรม</option>
-              <option>คณะศิลปศาสตร์ประยุกต์</option>
-              <option>คณะวิทยาศาสตร์</option>
-              <option>คณะเทคโนโลยีการเกษตร</option>
-              <option>คณะเทคโนโลยีสารสนเทศ</option>
-              <option>คณะอุตสาหกรรมเกษตร</option>
-              <option>วิทยาลัยนานาชาติ</option>
-              <option>วิทยาล้าลาดกระบัง</option>
-              <option>วิทยาลัยการบริหารและจัดการ</option>
-            </select> 
-           
-      </label>
+      <span class="input-label">คณะ</span>
+      <label class="item item-input ic-selected">
+                <select name="Faculty" ng-model="user_extras.Faculty" placeholder="Faculty">
+                  <option>คณะวิศวกรรมศาสตร์</option>
+                  <option>คณะสถาปัตยกรรมศาสตร์</option>
+                  <option>คณะครุศาสตร์อุตสาหกรรม</option>
+                  <option>คณะเทคโนโลยีการเกษตร</option>
+                  <option>คณะวิทยาศาสตร์</option>
+                  <option>คณะอุตสาหกรรมเกษตร</option>
+                  <option>คณะเทคโนโลยีสารสนเทศ</option>
+                  <option>วิทยาลัยนานาชาติ</option>
+                  <option>วิทยาลัยนาโนเทคโนโลยี</option>
+                  <option>วิทยาลัยนวัตกรรมการจัดการข้อมูล</option>
+                  <option>วิทยาลัยการบริหารและจัดการ</option>
+                  <option>คณะศิลปศาสตร์ประยุกต์</option>   
+                </select> 
+                </label>            
 
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">ภาควิชา</span>
-        <input type="text" placeholder="เช่น ครุศาสตร์วิศวกรรมคอมฯ ">
-      </label>
+                <span class="input-label">ภาควิชา</span>
+                <label class="item item-input ic-selected">
+                <select name="Program" ng-model="user_extras.Program" placeholder="Program">
+                  <option>ครุศาสตร์วิศวกรรม</option>
+                  <option>ครุศาสตร์เกษตร</option>
+                  <option>ครุศาสตร์สถาปัตยกรรม</option>   
+                </select> 
+                </label>
 
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">สาขาวิชา</span>
-        <input type="text" placeholder="เช่น ครุศาสตร์วิศวกรรม ครุศาสตร์เกษตร  ">
-      </label>
-        
+                <span class="input-label">สาขาวิชา</span>
+                <label class="item item-input ic-selected">
+                <select name="Major" ng-model="user_extras.Major" placeholder="Major">
+                  <option>วิศวกรรมโทรคมนาคม</option>
+                  <option>วิศวกรรมอิเล็กทรอนิกส์</option>
+                  <option>วิศวกรรมคอมพิวเตอร์</option>   
+                </select>
+                </label>
       </ion-list>
       </div>
     
