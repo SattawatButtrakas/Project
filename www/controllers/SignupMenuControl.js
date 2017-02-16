@@ -13,7 +13,4 @@ angular.module('app')
     }
 
     
-
-
-  
  })
