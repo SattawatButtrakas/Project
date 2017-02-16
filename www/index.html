@@ -17,6 +17,11 @@
     <script src="cordova.js"></script>
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
     <script src="controllers/loginControl.js"></script>
     <script src="controllers/SignupControl.js"></script>
     <script src="controllers/manuControl.js"></script>
@@ -29,26 +34,6 @@
     <script src="controllers/Admincontrol.js"></script>
     <script src="controllers/Addactivitiescontrol.js"></script>
     <script src="controllers/SignupAddmincontrol.js"></script>
-    <!--Firebase Header-->
-    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDgrEyGD6ql83FhJFftZkxqv2_j0XrCud4",
-        authDomain: "auth-3685b.firebaseapp.com",
-        databaseURL: "https://auth-3685b.firebaseio.com",
-        storageBucket: "auth-3685b.appspot.com",
-        messagingSenderId: "119935540294"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/routes.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/directives.js"></script>
     <script src="controllers/manuControl.js"></script>
     <script src="controllers/SubjectControl.js"></script>
     <script src="controllers/activitiesControl.js"></script>
@@ -60,25 +45,40 @@
     <script src="controllers/AddminAddminControl.js"></script>
     <script src="controllers/AddsubjectControl.js"></script>
     <script src="controllers/AddactivitiesControl.js"></script>
+    <!--Firebase Header-->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-messaging.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDgrEyGD6ql83FhJFftZkxqv2_j0XrCud4",
+        authDomain: "auth-3685b.firebaseapp.com",
+        databaseURL: "https://auth-3685b.firebaseio.com",
+        storageBucket: "auth-3685b.appspot.com",
+        messagingSenderId: "119935540294"
+    };
+    firebase.initializeApp(config);
+    </script>
     <style type="text/css">
     .platform-ios .manual-ios-statusbar-padding {
         padding-top: 20px;
-    }
-    
+    }    
     .manual-remove-top-padding {
         padding-top: 0px;
-    }
-    
+    }    
     .manual-remove-top-padding .scroll {
         padding-top: 0px !important;
-    }
-    
+    }    
     ion-list.manual-list-fullwidth div.list,
     .list.card.manual-card-fullwidth {
         margin-left: -10px;
         margin-right: -10px;
-    }
-    
+    }    
     ion-list.manual-list-fullwidth div.list > .item,
     .list.card.manual-card-fullwidth > .item {
         border-radius: 0px;
@@ -87,7 +87,6 @@
     }
     </style>
 </head>
-
 <body ng-app="app" animation="slide-left-right-ios7">
     <div style="">
         <!--#5. indexCtrl -->
@@ -128,6 +127,5 @@
             </ion-side-menu>
         </ion-side-menus>
     </div>
-</body>
-
+  </body>
 </html>
