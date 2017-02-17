@@ -6,23 +6,30 @@
     <div class="list list-inset card">
     <ion-list>
 
-     <label class="item item-input item-stacked-label">
-        <span class="input-label">ชื่อ</span>
-        <input type="text" placeholder="เจริญดี">
-      </label>
+        <ng-form name="firstnameForm" class="item item-input item-stacked-label">
+            ชื่อ <input placeholder="กรุณากรอกชื่อ" type="text" ng-model="firstname" name="firstname" ng-pattern="RE" /><br />
+            <span ng-show="firstnameForm.firstname.$error.pattern" style="color:red">กรุณากรอกตัวอักษรอย่างเดียว</span>
+        </ng-form>
 
-      <label class="item item-input item-stacked-label">
-         <span class="input-label">นามสกุล</span>
-         <input type="text" placeholder="ดีมาก">
-       </label>
+        <ng-form name="lastnameForm" class="item item-input item-stacked-label">
+            นามสกุล <input placeholder="กรุณากรอกนามสกุล" type="text" ng-model="lastname" name="lastname" ng-pattern="RE" /><br />
+            <span ng-show="lastnameForm.lastname.$error.pattern" style="color:red">กรุณากรอกตัวอักษรอย่างเดียว</span>
+        </ng-form>
 
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">รหัสนักศึกษา</span>
-        <input type="number" placeholder="เช่น 56030xxx">
-      </label>
+        <ng-form name="idstudentForm" class="item item-input item-stacked-label">
+            รหัสนักศึกษา <input placeholder="กรุณากรอกรหัสนักศึกษา" type="text" ng-model="idstudent" name="idstudent" ng-pattern="NE" /><br />
+            <span ng-show="idstudentForm.idstudent.$error.pattern" style="color:red">กรุณากรอกหรัสนักศึกษา</span>
+        </ng-form>
 
-      <span class="input-label">คณะ</span>
+        <ng-form name="emailForm" class="item item-input item-stacked-label">
+            E-mail <input placeholder="กรุณากรอกรหัสนักศึกษา" type="text" ng-model="email" name="email" ng-pattern="Email" /><br />
+            <span ng-show="emailForm.email.$error.pattern" style="color:red">E-mail ของ @kmitl.ac.th เท่านั้น</span>
+        </ng-form>
+
+      
       <label class="item item-input ic-selected">
+      <span class="input-label">คณะ</span>
+      
                 <select name="Faculty" ng-model="user_extras.Faculty" placeholder="Faculty">
                   <option>คณะวิศวกรรมศาสตร์</option>
                   <option>คณะสถาปัตยกรรมศาสตร์</option>
@@ -37,10 +44,10 @@
                   <option>วิทยาลัยการบริหารและจัดการ</option>
                   <option>คณะศิลปศาสตร์ประยุกต์</option>   
                 </select> 
-                </label>            
+                </label>  
 
-                <span class="input-label">ภาควิชา</span>
                 <label class="item item-input ic-selected">
+                <span class="input-label">ภาควิชา</span>                
                 <select name="Program" ng-model="user_extras.Program" placeholder="Program">
                   <option>ครุศาสตร์วิศวกรรม</option>
                   <option>ครุศาสตร์เกษตร</option>
@@ -48,8 +55,8 @@
                 </select> 
                 </label>
 
-                <span class="input-label">สาขาวิชา</span>
                 <label class="item item-input ic-selected">
+                <span class="input-label">สาขาวิชา</span>
                 <select name="Major" ng-model="user_extras.Major" placeholder="Major">
                   <option>วิศวกรรมโทรคมนาคม</option>
                   <option>วิศวกรรมอิเล็กทรอนิกส์</option>
