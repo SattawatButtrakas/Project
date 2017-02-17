@@ -1,7 +1,7 @@
 angular.module('app.controllers', [])
-
 .controller('loginCtrl', function($scope, $rootScope, $ionicHistory, sharedUtils, $state, $ionicSideMenuDelegate) {
-    $rootScope.extras = false; // For hiding the side bar and nav icon
+    $rootScope.extras = false; 
+    // For hiding the side bar and nav icon
     // When the user logs out and reaches login page,
     // we clear all the history and cache to prevent back link
     $scope.$on('$ionicView.enter', function(ev) {
@@ -52,7 +52,6 @@ angular.module('app.controllers', [])
         //Gmail Login
     };
 })
-
 .controller('signupCtrl', function($scope, $rootScope, sharedUtils, $ionicSideMenuDelegate,
     $state, fireBaseData, $ionicHistory) {
     $rootScope.extras = false; // For hiding the side bar and nav icon
@@ -83,62 +82,6 @@ angular.module('app.controllers', [])
         }
     }
 })
-
-//.controller('menu2Ctrl', function($scope, $rootScope, $ionicSideMenuDelegate, fireBaseData, $state,
-//    $ionicHistory, $firebaseArray, sharedCartService, sharedUtils) {
-//
-//    //Check if user already logged in
-//   firebase.auth().onAuthStateChanged(function(user) {
-//        if (user) {
-//            $scope.user_info = user; //Saves data to user_info
-//        } else {
-//
-//            $ionicSideMenuDelegate.toggleLeft(); //To close the side bar
-//            $ionicSideMenuDelegate.canDragContent(false); // To remove the sidemenu white space
-//
-//            $ionicHistory.nextViewOptions({
-//                historyRoot: true
-//            });
-//            $rootScope.extras = false;
-//            sharedUtils.hideLoading();
-//            $state.go('tabsController.login', {}, { location: "replace" });
-//
-//        }
-//    });
-//
-//    // On Loggin in to menu page, the sideMenu drag state is set to true
-//    $ionicSideMenuDelegate.canDragContent(true);
-//    $rootScope.extras = true;
-//
-//    // When user visits A-> B -> C -> A and clicks back, he will close the app instead of back linking
-//    $scope.$on('$ionicView.enter', function(ev) {
-//        if (ev.targetScope !== $scope) {
-//            $ionicHistory.clearHistory();
-//            $ionicHistory.clearCache();
-//        }
-//    });
-//
-//
-//
-//    $scope.loadMenu = function() {
-//        sharedUtils.showLoading();
-//        $scope.menu = $firebaseArray(fireBaseData.refMenu());
-//        sharedUtils.hideLoading();
-//    }
-//
-//    $scope.showProductInfo = function(id) {
-//
-//    };
-//    $scope.addToCart = function(item) {
-//        sharedCartService.add(item);
-//    };
-//
-//})
-
-
-
-
-
 .controller('indexCtrl', function($scope, $rootScope, sharedUtils, $ionicHistory, $state, $ionicSideMenuDelegate, sharedCartService) {
 
     //Check if user already logged in
@@ -196,45 +139,29 @@ angular.module('app.controllers', [])
         });
 
     }
-
 })
-
-
-
-
-
 .controller('favouriteCtrl', function($scope, $rootScope) {
 
     $rootScope.extras = true;
 })
-
 .controller('settingsCtrl', function($scope, $rootScope, fireBaseData, $firebaseObject,
     $ionicPopup, $state, $window, $firebaseArray,
     sharedUtils) {
     //Bugs are most prevailing here
     $rootScope.extras = true;
-
     //Shows loading bar
     sharedUtils.showLoading();
-
     //Check if user already logged in
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-
             // firebaseObject is good for accessing single objects for eg:- telephone. Don't use it for array of objects
             $scope.user_extras = $firebaseObject(fireBaseData.refUser().child(user.uid));
-
             $scope.user_info = user; //Saves data to user_info
             //NOTE: $scope.user_info is not writable ie you can't use it inside ng-model of <input>
-
             $scope.$apply();
-
             sharedUtils.hideLoading();
-
         }
-
     });
-
     $scope.save = function(extras) {
         //1. Edit name doesnt show popup 2. Using extras and editable  // Bugs
         if (extras.Name != "" && extras.Name != null) {
@@ -261,22 +188,70 @@ angular.module('app.controllers', [])
                 Program: extras.Program
             });
         }
-        if (extras.Telephone != "" && extras.Telephone != null) {
-            //Update Telephone 
+        if (extras.Major != "" && extras.Major != null) {
+            //Update Major
             fireBaseData.refUser().child($scope.user_info.uid).update({ // set
-                Telephone: extras.Telephone
+                Major: extras.Major
             });
         }
     };
-
-
     $scope.cancel = function() {
         // Simple Reload
         $window.location.reload(true);
         console.log("CANCEL");
     }
-
 })
+
+//.controller('menu2Ctrl', function($scope, $rootScope, $ionicSideMenuDelegate, fireBaseData, $state,
+//    $ionicHistory, $firebaseArray, sharedCartService, sharedUtils) {
+//
+//    //Check if user already logged in
+//   firebase.auth().onAuthStateChanged(function(user) {
+//        if (user) {
+//            $scope.user_info = user; //Saves data to user_info
+//        } else {
+//
+//            $ionicSideMenuDelegate.toggleLeft(); //To close the side bar
+//            $ionicSideMenuDelegate.canDragContent(false); // To remove the sidemenu white space
+//
+//            $ionicHistory.nextViewOptions({
+//                historyRoot: true
+//            });
+//            $rootScope.extras = false;
+//            sharedUtils.hideLoading();
+//            $state.go('tabsController.login', {}, { location: "replace" });
+//
+//        }
+//    });
+//
+//    // On Loggin in to menu page, the sideMenu drag state is set to true
+//    $ionicSideMenuDelegate.canDragContent(true);
+//    $rootScope.extras = true;
+//
+//    // When user visits A-> B -> C -> A and clicks back, he will close the app instead of back linking
+//    $scope.$on('$ionicView.enter', function(ev) {
+//        if (ev.targetScope !== $scope) {
+//            $ionicHistory.clearHistory();
+//            $ionicHistory.clearCache();
+//        }
+//    });
+//
+//
+//
+//    $scope.loadMenu = function() {
+//        sharedUtils.showLoading();
+//        $scope.menu = $firebaseArray(fireBaseData.refMenu());
+//        sharedUtils.hideLoading();
+//    }
+//
+//    $scope.showProductInfo = function(id) {
+//
+//    };
+//    $scope.addToCart = function(item) {
+//        sharedCartService.add(item);
+//    };
+//
+//})
 
 
 
